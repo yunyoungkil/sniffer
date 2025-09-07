@@ -1,0 +1,38 @@
+{
+    "manifest_version": 3,
+    "name": "My Chrome Extension",
+    "version": "1.0.0",
+    "description": "Chrome 확장 프로그램 템플릿 (팝업 + 사이드 패널)",
+    "icons": {
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "permissions": [
+      "storage",
+      "activeTab",
+      "scripting",
+      "sidePanel"
+    ],
+    "host_permissions": [
+      "<all_urls>"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup/popup.html",
+      "default_icon": "icons/icon48.png"
+    },
+    "devtools_page": "devtools/devtools.html",
+    "side_panel": {
+      "default_path": "sidebar/sidebar.html"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js", "picker.js", "cancelPicker.js"],
+        "run_at": "document_idle"
+
+      }
+    ]
+  }

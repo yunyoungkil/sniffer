@@ -1,0 +1,86 @@
+body {
+    width: 95%;
+    font-family: Arial, sans-serif;
+    padding: 12px;
+    font-size: 15px;
+  }
+  h2 {
+    margin-top: 0;
+  }
+/* 버튼 컨테이너 스타일 */
+#buttonContainer {
+  background: #ffffff;
+  /* border-bottom: 1px solid #ddd; */
+  padding: 12px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* 역할 리스트 컨테이너 스타일 */
+#roleListContainer {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 12px;
+  margin: 0px 0px 12px 0px ;
+  font-size: 14px;
+}
+
+/* 결과 데이터 컨테이너 스타일 */
+#resultContainer {
+  display: flex;
+  flex-direction: column; /* 최신 데이터가 위로 오도록 */
+  gap: 12px;
+}
+
+/* 각 데이터 블록 스타일 */
+.result-block {
+  background: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* 역할(role) 선택 리스트 아이템 */
+.role-item {
+  cursor: pointer;
+  color: #007bff;
+  margin-right: 8px;
+  display: inline-block;
+  margin-bottom: 4px;
+}
+.role-item:hover {
+  text-decoration: underline;
+}
+
+/* 버튼 공통 스타일 */
+#buttonContainer button {
+  padding: 6px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  background: #f8f8f8;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+#buttonContainer button:hover {
+  background: #e6e6e6;
+}
+.role-tree {
+  list-style: none;
+  padding-left: 0;
+  font-size: 14px;
+}
+.role-tree details > summary {
+  cursor: pointer;
+  font-weight: bold;
+  padding: 4px 0;
+}
+.role-tree li {
+  padding: 2px 0;
+}
